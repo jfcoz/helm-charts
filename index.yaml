@@ -1,5 +1,27 @@
 apiVersion: v1
 entries:
+  bucket:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-01-17T20:45:15.771840188Z"
+    description: A Helm chart for Kubernetes
+    digest: 19c0402f9f7a57fc8f219e6a0e91e5cc0b4fb55f11f71ba362bb827e0ad83b46
+    name: bucket
+    type: application
+    urls:
+    - https://github.com/jfcoz/helm-charts/releases/download/bucket-1.2/bucket-1.2.tgz
+    version: "1.2"
+  mariadb:
+  - apiVersion: v2
+    appVersion: "10"
+    created: "2023-01-17T20:45:15.901225171Z"
+    description: A Helm chart for Kubernetes
+    digest: bfd367a99d11e45ad66c1729cb739b3b1bc49258b1bfb33a3604fd115b70ad3d
+    name: mariadb
+    type: application
+    urls:
+    - https://github.com/jfcoz/helm-charts/releases/download/mariadb-10.1/mariadb-10.1.tgz
+    version: "10.1"
   redis:
   - apiVersion: v2
     appVersion: "7"
@@ -11,4 +33,4 @@ entries:
     urls:
     - https://github.com/jfcoz/helm-charts/releases/download/redis-7.1/redis-7.1.tgz
     version: "7.1"
-generated: "2023-01-17T20:39:15.633079976Z"
+generated: "2023-01-17T20:45:15.901231871Z"
