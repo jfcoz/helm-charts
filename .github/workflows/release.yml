@@ -29,4 +29,4 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
-          chart_dir: jfcoz/
+          charts_dir: jfcoz/
