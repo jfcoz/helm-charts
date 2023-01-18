@@ -36,6 +36,30 @@ entries:
   wordpress-readonly:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-01-18T20:48:06.076445448Z"
+    dependencies:
+    - condition: bucket.enabled
+      name: bucket
+      repository: https://jfcoz.github.io/helm-charts/
+      version: "1.2"
+    - condition: redis.enabled
+      name: redis
+      repository: https://jfcoz.github.io/helm-charts/
+      version: "7.1"
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://jfcoz.github.io/helm-charts/
+      version: "10.1"
+    description: A Helm chart for Wordpress, using readonly container, scalable, object
+      storage for uploads
+    digest: d3fdb47aa824a288f07c31f18a05c67cbc4d1d466055912d8004264710ba125d
+    name: wordpress-readonly
+    type: application
+    urls:
+    - https://github.com/jfcoz/helm-charts/releases/download/wordpress-readonly-1.0.2/wordpress-readonly-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-01-17T22:43:34.67876529Z"
     dependencies:
     - condition: bucket.enabled
@@ -82,4 +106,4 @@ entries:
     urls:
     - https://github.com/jfcoz/helm-charts/releases/download/wordpress-readonly-1.0.0/wordpress-readonly-1.0.0.tgz
     version: 1.0.0
-generated: "2023-01-17T22:43:34.678946991Z"
+generated: "2023-01-18T20:48:06.076457348Z"
