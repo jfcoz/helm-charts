@@ -14,6 +14,16 @@ entries:
   mariadb:
   - apiVersion: v2
     appVersion: "10"
+    created: "2023-02-17T19:24:31.236798222Z"
+    description: A Helm chart for Kubernetes
+    digest: 0c49cffd065ad95f8022a79922e2e707cfa928d2b7a1081e118081530cb3af47
+    name: mariadb
+    type: application
+    urls:
+    - https://github.com/jfcoz/helm-charts/releases/download/mariadb-10.3/mariadb-10.3.tgz
+    version: "10.3"
+  - apiVersion: v2
+    appVersion: "10"
     created: "2023-02-17T19:14:13.050658434Z"
     description: A Helm chart for Kubernetes
     digest: 53db5234990413b7319a5406d142b583a704a6e14df50f101ad5f57119caa857
@@ -140,4 +150,4 @@ entries:
     urls:
     - https://github.com/jfcoz/helm-charts/releases/download/wordpress-readonly-1.0.0/wordpress-readonly-1.0.0.tgz
     version: 1.0.0
-generated: "2023-02-17T19:20:46.184398905Z"
+generated: "2023-02-17T19:24:31.236814223Z"
