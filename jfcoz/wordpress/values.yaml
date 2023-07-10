@@ -113,3 +113,6 @@ redis:
   #host: change_me
   #port: change_me
   #database: change_me
+
+opentelemetry:
+  endpoint: http://collector-collector.infra-opentelemetry:4317

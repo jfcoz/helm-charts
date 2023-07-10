@@ -16,6 +16,9 @@ spec:
       {{- with .Values.podAnnotations }}
       annotations:
         {{- toYaml . | nindent 8 }}
+        {{- if and (.Capabilities.APIVersions.Has "opentelemetry.io/v1alpha1/Instrumentation") .Values.opentelemetry.endpoint }}
+        instrumentation.opentelemetry.io/inject-sdk: "true"
+        {{- end }}
       {{- end }}
       labels:
         {{- include "wordpress.selectorLabels" . | nindent 8 }}
