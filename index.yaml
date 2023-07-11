@@ -55,6 +55,29 @@ entries:
     version: "7.1"
   wordpress:
   - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2023-07-11T11:22:32.422515004Z"
+    dependencies:
+    - condition: bucket.enabled
+      name: bucket
+      repository: https://jfcoz.github.io/helm-charts/
+      version: "1.2"
+    - condition: redis.enabled
+      name: redis
+      repository: https://jfcoz.github.io/helm-charts/
+      version: "7.1"
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://jfcoz.github.io/helm-charts/
+      version: "10.3"
+    description: A Helm chart for Wordpress, using official Wordpress docker image
+    digest: 83c60ee2df565e0b713d9bbb4bfd5905530b0b97f20ae355fb43b0378be4defa
+    name: wordpress
+    type: application
+    urls:
+    - https://github.com/jfcoz/helm-charts/releases/download/wordpress-1.0.5/wordpress-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
     appVersion: 1.0.4
     created: "2023-07-10T20:18:41.280012044Z"
     dependencies:
@@ -196,4 +219,4 @@ entries:
     urls:
     - https://github.com/jfcoz/helm-charts/releases/download/wordpress-readonly-1.0.0/wordpress-readonly-1.0.0.tgz
     version: 1.0.0
-generated: "2023-07-10T20:18:41.280045344Z"
+generated: "2023-07-11T11:22:32.422546504Z"
