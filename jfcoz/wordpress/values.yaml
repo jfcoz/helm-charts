@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: wordpress
+  repository: jfcoz/wptest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "opentelemetry"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -114,5 +114,5 @@ redis:
   #port: change_me
   #database: change_me
 
-opentelemetry:
-  endpoint: http://collector-collector.infra-opentelemetry:4317
+#opentelemetry:
+#  endpoint: http://collector-collector.infra-opentelemetry:4318

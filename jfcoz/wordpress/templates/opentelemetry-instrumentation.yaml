@@ -6,13 +6,22 @@ metadata:
   labels:
     {{- include "wordpress.labels" . | nindent 4 }}
 spec:
+  env:
+    - name: OTEL_LOGS_EXPORTER
+      value: none
+    - name: OTEL_METRICS_EXPORTER
+      value: none
+    - name: OTEL_TRACES_EXPORTER
+      value: otlp
+    - name: OTEL_PHP_AUTOLOAD_ENABLED
+      value: "true"
   exporter:
     endpoint: {{ .Values.opentelemetry.endpoint }}
   propagators:
     - tracecontext
     - baggage
-    - b3
+    #- b3
   sampler:
     type: parentbased_traceidratio
-    argument: "0.25"
+    argument: "1"
 {{- end }}
