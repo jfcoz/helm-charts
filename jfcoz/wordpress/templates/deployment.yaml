@@ -66,6 +66,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            {{/* only listen on 80 with caddy, no need of ssl cert*/}}
+            - name: SERVER_NAME
+              value: ":80"
             {{- if .Values.mariadb.enabled }}
             - name: WORDPRESS_DB_HOST
               value: {{ template "mariadb.fullname" .Subcharts.mariadb }}

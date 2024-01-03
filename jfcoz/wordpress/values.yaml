@@ -8,7 +8,7 @@ image:
   repository: jfcoz/wptest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "opentelemetry"
+  tag: "opentelemetry-frankenphp"
 
 imagePullSecrets: []
 nameOverride: ""
