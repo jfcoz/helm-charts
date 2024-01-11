@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: jfcoz/wptest
+  repository: jfcoz/wordpress-opentelemetry
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "opentelemetry-frankenphp"
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
