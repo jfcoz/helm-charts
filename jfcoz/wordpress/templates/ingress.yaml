@@ -49,9 +49,17 @@ spec:
             backend:
               {{- if semverCompare ">=1.19-0" $.Capabilities.KubeVersion.GitVersion }}
               service:
+                {{- if $.Values.varnish.enabled }}
+                name: {{ include "kube-httpcache.fullname" $.Subcharts.varnish }}
+                {{- else }}
                 name: {{ $fullName }}
+                {{- end }}
                 port:
+                  {{- if $.Values.varnish.enabled }}
+                  number: {{ $.Values.varnish.service.port }}
+                  {{- else }}
                   number: {{ $svcPort }}
+                  {{- end }}
               {{- else }}
               serviceName: {{ $fullName }}
               servicePort: {{ $svcPort }}

@@ -116,3 +116,22 @@ redis:
 
 #opentelemetry:
 #  endpoint: http://collector-collector.infra-opentelemetry:4318
+
+varnish:
+  enabled: true
+  image:
+    # use same chart version by default
+    # until https://github.com/mittwald/kube-httpcache/pull/214
+    #tag: ""
+    tag: "stable"
+  cache:
+    backendService: "{{ .Release.Name }}-wordpress"
+    storageSize: 100M
+  # no ARM suport : https://github.com/jonnenauha/prometheus_varnish_exporter/pull/77
+  #serviceMonitor:
+  #  enabled: true
+  #exporter:
+  #  enabled: true
+  resources:
+    requests:
+      memory: 128Mi
